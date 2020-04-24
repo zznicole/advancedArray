@@ -105,13 +105,21 @@ displayClassroom();
 console.log(classrooms);
 
 // 2) Display all the classrooms for a given faculty; 
-function displayFaculty() {
-  for(let classroom of classrooms) {
-    document.write(`<article>${classroom.faculty}</article>`);
-  }
-  return;
+// function displayFaculty() {
+//   for(let classroom of classrooms) {
+//     document.write(`<article>${classroom.faculty}</article>`);
+//   }
+//   return;
+// }
+// displayFaculty();
+
+function facultyClassroom(classroom) {
+  
+return classroom.faculty == "Engineering";
 }
-displayFaculty();
+
+console.log(classrooms.filter(facultyClassroom));
+
 
 // 3) Display only the classrooms that would fit a given group. A group object contains a name, 
 // the number of students, and the faculty name.
